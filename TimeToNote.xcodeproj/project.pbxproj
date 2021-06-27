@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		F01DBC852681C19D00034F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DBC842681C19D00034F3C /* AppDelegate.swift */; };
 		F01DBC872681C19D00034F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DBC862681C19D00034F3C /* SceneDelegate.swift */; };
-		F01DBC892681C19D00034F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DBC882681C19D00034F3C /* ViewController.swift */; };
+		F01DBC892681C19D00034F3C /* TimeToNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DBC882681C19D00034F3C /* TimeToNoteViewController.swift */; };
 		F01DBC8C2681C19D00034F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01DBC8A2681C19D00034F3C /* Main.storyboard */; };
 		F01DBC8E2681C1A100034F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01DBC8D2681C1A100034F3C /* Assets.xcassets */; };
 		F01DBC912681C1A100034F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01DBC8F2681C1A100034F3C /* LaunchScreen.storyboard */; };
+		F01DBCCA2684F97200034F3C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F01DBCC82684F97200034F3C /* Model.xcdatamodeld */; };
+		F01DBCCE2687A32F00034F3C /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01DBCCD2687A32F00034F3C /* CategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F01DBC812681C19D00034F3C /* TimeToNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeToNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01DBC842681C19D00034F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01DBC862681C19D00034F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F01DBC882681C19D00034F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F01DBC882681C19D00034F3C /* TimeToNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToNoteViewController.swift; sourceTree = "<group>"; };
 		F01DBC8B2681C19D00034F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F01DBC8D2681C1A100034F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F01DBC902681C1A100034F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F01DBC922681C1A100034F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01DBCC92684F97200034F3C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F01DBCCD2687A32F00034F3C /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryTableViewController.swift; path = TimeToNote/View/CategoryTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,39 @@
 			children = (
 				F01DBC842681C19D00034F3C /* AppDelegate.swift */,
 				F01DBC862681C19D00034F3C /* SceneDelegate.swift */,
-				F01DBC882681C19D00034F3C /* ViewController.swift */,
-				F01DBC8A2681C19D00034F3C /* Main.storyboard */,
+				F01DBCA126838AA400034F3C /* Model */,
+				F01DBC9B26838A1F00034F3C /* View */,
+				F01DBC9A26838A0200034F3C /* Controller */,
 				F01DBC8D2681C1A100034F3C /* Assets.xcassets */,
 				F01DBC8F2681C1A100034F3C /* LaunchScreen.storyboard */,
 				F01DBC922681C1A100034F3C /* Info.plist */,
 			);
 			path = TimeToNote;
+			sourceTree = "<group>";
+		};
+		F01DBC9A26838A0200034F3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F01DBCCD2687A32F00034F3C /* CategoryTableViewController.swift */,
+				F01DBC882681C19D00034F3C /* TimeToNoteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F01DBC9B26838A1F00034F3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F01DBC8A2681C19D00034F3C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F01DBCA126838AA400034F3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F01DBCC82684F97200034F3C /* Model.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01DBC892681C19D00034F3C /* ViewController.swift in Sources */,
+				F01DBC892681C19D00034F3C /* TimeToNoteViewController.swift in Sources */,
 				F01DBC852681C19D00034F3C /* AppDelegate.swift in Sources */,
+				F01DBCCE2687A32F00034F3C /* CategoryTableViewController.swift in Sources */,
 				F01DBC872681C19D00034F3C /* SceneDelegate.swift in Sources */,
+				F01DBCCA2684F97200034F3C /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +373,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F01DBCC82684F97200034F3C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F01DBCC92684F97200034F3C /* Model.xcdatamodel */,
+			);
+			currentVersion = F01DBCC92684F97200034F3C /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F01DBC792681C19D00034F3C /* Project object */;
 }
